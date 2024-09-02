@@ -2,8 +2,6 @@ FROM node:alpine
 
 VOLUME [ "/app" ]
 
-COPY . . 
-
 RUN npm -g install serve
 
 EXPOSE 8080
