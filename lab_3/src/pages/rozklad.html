@@ -1,90 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= htmlWebpackPlugin.options.title %></title>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <style>
-        table {
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        th, td {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-        
-        th {
-          background-color: #f2f2f2;
-        }
-        </style>     
-</head>
-<body>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <h1>Особиста сторінка (<u>блог</u>) Просвєтова Олександра Олександровича</h1>
-            <ul>
-                <li><a href="rozklad.html">Мій розклад</a></li>
-                <li><a href="photo.html">Фотоальбом</a></li>
-                <li><a href="news.html">Останні новини</a></li>
-                <li>Відеороліки</li>
-            </ul>
-        </div>
+      <div class="container">
+        <h1>
+          Особиста сторінка (<a href="/"><u>блог</u></a
+          >) Просвєтова Олександра Олександровича
+        </h1>
+        <ul>
+          <li><a href="rozklad.html">Мій розклад</a></li>
+          <li><a href="photo.html">Фотоальбом</a></li>
+          <li><a href="news.html">Останні новини</a></li>
+          <li>Відеороліки</li>
+        </ul>
+      </div>
     </header>
 
     <main>
-        <h2>Мій розклад</h2>
+      <h2>Мій розклад</h2>
 
-        <table>
-            <tr>
-                <th>Понеділок</th>
-                <th>Вівторок</th>
-                <th>Середа</th>
-                <th>...</th>
-            </tr>
+      <table>
+        <tr>
+          <th>Понеділок</th>
+          <th>Вівторок</th>
+          <th>Середа</th>
+          <th>Четвер</th>
+          <th>П'ятниця</th>
+          <th>Субота</th>
+        </tr>
 
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
+        <tr>
+          <td>12:55 Веб програмування (Дребезов)</td>
+          <td>11:25 Мови програмування мобільних пристроїв (Дребезов)</td>
+          <td>
+            (Чисельник):55 Системи віртуалізації та контейнеризації 1 група –
+            (Дребезов) 2 група – (Ракша)
+          </td>
+          <td>Нічого</td>
+          <td>
+            16:05 Системи віртуалізації та контейнеризації 1 група – (Дребезов)
+            2 група – (Ракша)
+          </td>
+          <td>8:00 Політологія (Вагіна)</td>
+        </tr>
 
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
+        <tr>
+          <td>14:30 Аналіз вимог до ПЗ (Мильцев) Ідентифікатор:</td>
+          <td>12:55 Візуальні мови програмування (Краснікова)</td>
+          <td>
+            14:30 (1 група)Веб програмування (Дребезов) (2 група)Аналіз вимог до
+            ПЗ (Ярош)
+          </td>
+          <td>Нічого</td>
+          <td>17:40 Мови програмування моб пристроїв (Дребезов) Дребезов</td>
+          <td>9:35 Англійська мова професійного спрямування</td>
+        </tr>
 
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-        </table>
+        <tr>
+          <td>
+            16:05 (Чисельник) Системи віртуалізації та контейнеризації
+            (Знаменник) Нічого
+          </td>
+          <td>...</td>
+          <td>
+            16:05 (1 група)Аналіз вимог до ПЗ (Мильцев) (2 група)Веб
+            програмування (Панасенко)
+          </td>
+          <td>Нічого</td>
+          <td>17:40 Мови програмування моб пристроїв (Дребезов)</td>
+          <td>...</td>
+        </tr>
+      </table>
     </main>
 
     <footer>
-        <b>***</b>
-        <br>Copyrite 2024. Усі права захищені. Напишіть мені!
+      <b>***</b>
+      <br />Copyrite 2024. Усі права захищені. Напишіть мені!
     </footer>
-</body>
+  </body>
 </html>
