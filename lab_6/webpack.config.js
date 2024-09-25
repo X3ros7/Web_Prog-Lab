@@ -36,12 +36,11 @@ module.exports = {
       filename: "pages/news.html",
     }),
     new CopyPlugin({
-      patterns: [
-        { from: "src/assets", to: "assets" },
-        { from: "src/less", to: "less" },
-      ],
+      patterns: [{ from: "src/assets", to: "assets" }],
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "css/main.css",
+    }),
   ],
   devServer: {
     static: {

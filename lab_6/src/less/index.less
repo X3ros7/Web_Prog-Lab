@@ -2,7 +2,12 @@
 
 @content-max-width: 800px;
 @content-min-width: 300px;
+
 @gradient-colors: #e01625, #963b42, #78040d, #f4616c, #f49ba2;
+@border-color: #000000;
+
+@image-width: 250px;
+@image-height: @image-width;
 
 table {
   border-collapse: collapse;
@@ -11,7 +16,7 @@ table {
 
 th,
 td {
-  border: 1px solid #000000;
+  border: 1px solid @border-color;
   text-align: left;
   padding: 8px;
 }
@@ -51,8 +56,8 @@ p {
   padding: 0 15px;
 
   .image {
-    width: 250px;
-    height: 250px;
+    width: @image-width;
+    height: @image-height;
     display: block;
     margin: 0 auto;
     padding-top: 25px;
