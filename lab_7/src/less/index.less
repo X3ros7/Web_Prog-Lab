@@ -1,0 +1,145 @@
+@import "./../css/normalize.css";
+@import "./../css/print.css";
+
+@content-max-width: 800px;
+@content-min-width: 300px;
+
+@gradient-colors: #e01625, #963b42, #78040d, #f4616c, #f49ba2;
+@border-color: #000000;
+
+@image-width: 250px;
+@image-height: @image-width;
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid @border-color;
+  text-align: left;
+  padding: 8px;
+}
+
+body {
+  max-width: @content-max-width;
+  min-width: @content-min-width;
+  width: 100%;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, @gradient-colors);
+  background-size: 300% 400%;
+}
+
+.header,
+.footer {
+  padding: 20px;
+}
+
+main {
+  padding: 30px 0;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.container {
+  max-width: @content-max-width;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  .image {
+    width: @image-width;
+    height: @image-height;
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+  }
+
+  .container__header {
+    text-align: center;
+  }
+
+  .container__image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    padding-top: 25px;
+  }
+}
+
+// Медиа-запрос для преобразования фиксированной ширины контента в относительную 90%
+@media (max-width: @content-max-width) {
+  body {
+    max-width: 90%;
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 90%;
+    padding: 0 5%;
+  }
+}
+
+// Медиа-запрос для преобразования горизонтального меню в вертикальное
+@media (max-width: 768px) {
+  .header {
+    height: auto; // изменяем высоту шапки
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 100%; // элементы меню становятся 100% ширины
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .header ul {
+    flex-direction: column;
+  }
+
+  .header ul li {
+    margin-bottom: 10px;
+  }
+
+  .container__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Сообщение для старых версий IE */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .header::before {
+    content: "Ваш браузер устарел, обновите его для лучшего отображения сайта.";
+    display: block;
+    background-color: #ffcc00;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+  }
+}
