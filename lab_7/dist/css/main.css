@@ -462,7 +462,14 @@ p {
     padding: 0 5%;
   }
 }
-@media (max-width: 768px) {
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 25px;
+}
+@media (max-width: 799px) {
   .header {
     height: auto;
   }
@@ -470,7 +477,6 @@ p {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;
   }
   .menu-item {
     width: 100%;
@@ -494,10 +500,9 @@ p {
     height: auto;
   }
 }
-/* Сообщение для старых версий IE */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .header::before {
-    content: "Ваш браузер устарел, обновите его для лучшего отображения сайта.";
+    content: "Ваш браузер застарів";
     display: block;
     background-color: #ffcc00;
     padding: 10px;
